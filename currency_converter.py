@@ -2,6 +2,9 @@ def convert_currency(amount, exchange_rate):
     if amount < 0:
         raise ValueError("Amount cannot be negative.")
 
+    if exchange_rate == 0:
+        raise ValueError("Exchange rate cannot be zero.")
+
     return amount * exchange_rate
 
 
